@@ -7,9 +7,10 @@ Expected utilization:
 * Create a new submodule for the component via GitHub
 * Add the submodule to this project
   * `git submodule init`
-  * `git submoudle add -f -b main <New_Submodule_Link> ./components/<New_Component_Name>`
+  * `git submodule add -f -b main <New_Submodule_Link> ./components/<New_Component_Name>`
 * Generate the new files
   * `./generate_template.sh <New_Component_Name>`
+    * Note that <New_Component_Name> must be <= 10 characters by default or you'll need to shorten the software bus pipe name after the fact
 * Copy the new files to the submodule
   * `mv ./new/* ../<New_Component_Name>/`
 * Commit the new files to the submodule
