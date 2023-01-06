@@ -37,7 +37,7 @@ echo "New component name upper = " $COMPONENT_NAME_UPPER
 echo ""
 
 echo "Copy all files in ./code to ./new directory"
-cp -R ./code ./new
+cp -R ./code/* ./new
 echo ""
 
 echo "Change ./new/sample to the provided component name"
@@ -47,6 +47,8 @@ find ./new -type f -exec sed -i "s/sample/$COMPONENT_NAME_LOWER/g" {} \;
 echo ""
 
 echo "Change the ./new/sample filenames to the provided component name"
+mv ./new/gsw/SAMPLE/cmd_tlm/SAMPLE_CMD.txt ./new/gsw/SAMPLE/cmd_tlm/${COMPONENT_NAME_UPPER}_CMD.txt
+mv ./new/gsw/SAMPLE/cmd_tlm/SAMPLE_TLM.txt ./new/gsw/SAMPLE/cmd_tlm/${COMPONENT_NAME_UPPER}_TLM.txt
 mv ./new/gsw/SAMPLE ./new/gsw/$COMPONENT_NAME_UPPER
 find ./new -type f | sed "p;s/SAMPLE/$COMPONENT_NAME_UPPER/g" | xargs -d '\n' -n 2 mv 2> /dev/null
 find ./new -type f | sed "p;s/Sample/$COMPONENT_NAME_FIRST/g" | xargs -d '\n' -n 2 mv 2> /dev/null
