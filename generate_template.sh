@@ -37,7 +37,7 @@ echo "New component name upper = " $COMPONENT_NAME_UPPER
 echo ""
 
 echo "Copy all files in ./code to ./new directory"
-cp -R ./code/* ./new
+cp -R ./code ./new
 echo ""
 
 echo "Change ./new/sample to the provided component name"
