@@ -21,6 +21,6 @@ Expected utilization:
   * `./fsw/nos3_defs/targets.cmake`
   * `./fsw/nos3_defs/tables/*`
 * Add new component to ground software (gsw) in the following files:
-  * `./gsw/cosmos/system/nos3_system.txt`
-  * `./gsw/cosmos/tools/nos3_cmd_tlm_server.txt`
+  * `./gsw/cosmos/config/system/nos3_system.txt`
+  * `./gsw/cosmos/config/tools/cmd_tlm_server/nos3_cmd_tlm_server.txt`
   * `./gsw/scripts/launch.sh`
